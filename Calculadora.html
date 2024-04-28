@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Solicitar entrada do usuário para os números e a operação
+        let n1 = parseFloat(prompt("Digite o primeiro número"));
+        let sinal = parseInt(prompt("Escolha a operação:\n1. Adição\n2. Subtração\n3. Multiplicação\n4. Divisão"));
+        let n2 = parseFloat(prompt("Digite o segundo número"));
+        
+
+        // Verificar se a operação é válida
+        if(isNaN(n1) || isNaN(n2) || isNaN(sinal) || sinal < 1 || sinal > 4){
+            document.write("Operação inválida");
+        } else {
+            // Executar a operação selecionada e exibir o resultado
+            let resultado;
+            switch(sinal){
+                case 1:
+                    resultado = n1 + n2;
+                    document.write(`O resultado da adição é ${resultado}`);
+                    break;
+                case 2:
+                    resultado = n1 - n2;
+                    document.write(`O resultado da subtração é ${resultado}`);
+                    break;
+                case 3:
+                    resultado = n1 * n2;
+                    document.write(`O resultado da multiplicação é ${resultado}`);
+                    break;
+                case 4:
+                    if(n2 === 0){
+                        document.write("Não é possível dividir por zero");
+                    } else {
+                        resultado = n1 / n2;
+                        document.write(`O resultado da divisão é ${resultado}`);
+                    }
+                    break;
+                default:
+                    document.write("Operação inválida");
+            }
+        }
+    </script>
+</body>
+</html>

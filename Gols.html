@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial;
+        }
+    </style>
+    <script>
+
+        let golsCorinthians = parseInt(prompt("Digite o número de gols marcados pelo Corinthians:"));
+        let golsPalmeiras = parseInt(prompt("Digite o número de gols marcados pelo Palmeiras:"));
+
+    
+        if (golsCorinthians > golsPalmeiras) {
+            document.write("<p>O Corinthians venceu!</p>");
+        } else if (golsPalmeiras > golsCorinthians) {
+            document.write("<p>O Palmeiras venceu!</p>");
+        } else {
+            document.write("<p>O jogo terminou em empate!</p>");
+        }
+    </script>
+</body>
+</html>

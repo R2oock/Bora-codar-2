@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial;
+        }
+    </style>
+    <script>
+        // Ler o número de lados e a medida do lado do polígono
+        let numeroLados = parseInt(prompt("Digite o número de lados do polígono"));
+        let medidaLado = parseFloat(prompt("Digite a medida do lado do polígono (em cm)"));
+
+        // Calcular e exibir o resultado de acordo com o número de lados
+        switch(numeroLados) {
+            case 3:
+                let perimetroTriangulo = 3 * medidaLado;
+                document.write(`TRIÂNGULO<br>Perímetro: ${perimetroTriangulo} cm`);
+                break;
+            case 4:
+                let areaQuadrado = medidaLado * medidaLado;
+                document.write(`QUADRADO<br>Área: ${areaQuadrado} cm²`);
+                break;
+            case 5:
+                let apotema = medidaLado / (2 * Math.tan(Math.PI / 5));
+                let areaPentagono = (5 * medidaLado * apotema) / 2;
+                document.write(`PENTÁGONO<br>Área: ${areaPentagono} cm²`);
+                break;
+            default:
+                if(numeroLados < 3) {
+                    document.write(`NÃO É UM POLÍGONO`);
+                } else {
+                    document.write(`POLÍGONO NÃO IDENTIFICADO`);
+                }
+        }
+
+    </script>
+</body>
+</html>
